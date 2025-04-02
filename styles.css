@@ -1,0 +1,192 @@
+/* Основные стили */
+body {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    background: #ffffff;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Контейнер */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2rem;
+    color: #00703c; /* Красный */
+}
+
+
+
+/* Кнопка */
+#start-button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #ff6600; /* Оранжевый */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+#start-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0);
+}
+
+/* Изображение */
+#image {
+    width: 180px;
+    margin-top: 20px;
+    transition: transform 0.1s ease;
+}
+
+#image.active {
+    transform: scale(1.1);
+}
+
+/* Индикатор громкости */
+#volume-bar {
+    width: 90%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px auto; /* Отступ сверху и снизу */
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Заполняющая часть */
+#volume-level {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00703c, #ff6600);
+    transition: width 0.1s ease-out;
+    border-radius: 10px; /* Теперь совпадает со всей полоской */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* Оверлей фона */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Затемнённый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Оверлей фона */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Затемнённый фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Окно ввода */
+.skin-popup {
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый */
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 320px;
+    width: 90%;
+    position: relative;
+    border: 3px solid #ff6600; /* Добавленная обводка (оранжевая) */
+}
+
+/* Заголовок */
+.skin-popup h2 {
+    color: #146C43; /* Тёмно-зелёный */
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Поле ввода */
+#skin-input {
+    width: 100%;
+    padding: 12px 0px;
+    border: 2px solid #ff6600; /* Оранжевая обводка */
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Поле ввода: эффект при фокусе */
+#skin-input:focus {
+    border-color: #d13329; /* Красный */
+    box-shadow: 0px 0px 10px rgba(209, 51, 41, 0.5);
+}
+
+/* Кнопка "Далее" */
+#apply-skin {
+    background: #ff6600; /* Оранжевый */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Эффект при наведении */
+#apply-skin:hover {
+    background: #cc5500; /* Чуть темнее оранжевый */
+    transform: scale(1.05);
+}
+
+/* Крестик (закрыть окно) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    color: #d13329; /* Красный */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Эффект при наведении на крестик */
+.close-btn:hover {
+    color: #b02a23;
+    transform: scale(1.2);
+}
