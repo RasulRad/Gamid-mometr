@@ -1,1 +1,0 @@
-# Gamid-mometr
