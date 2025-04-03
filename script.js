@@ -105,7 +105,7 @@ function startMicrophone() {
             const microphone = audioContext.createMediaStreamSource(stream);
             const scriptProcessor = audioContext.createScriptProcessor(256, 1, 1);
             
-            analyser.smoothingTimeConstant = 0.8;
+            analyser.smoothingTimeConstant = 0.3;
             analyser.fftSize = 512;  
             analyser.minDecibels = -90;  
             analyser.maxDecibels = -10;  
