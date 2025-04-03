@@ -81,6 +81,15 @@ function showSkinInput() {
     
 }
 
+navigator.mediaDevices.getUserMedia({ 
+    audio: { 
+        echoCancellation: false, // Отключаем подавление эха
+        noiseSuppression: false, // Отключаем подавление шума
+        autoGainControl: false // Отключаем автоматическую регулировку громкости
+    } 
+})
+
+
 function startMicrophone() {
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         alert("Ваш браузер не поддерживает доступ к микрофону.");
